@@ -1,6 +1,8 @@
-class Person {
-    constructor (name, age) {
-        this.name = name;
-        this.age = age;
-    }
+data = []
+
+
+async function pesquisa() {
+    arquivo = await data.json
+    data = await arquivo.json()
+    console.log(data)
 }
