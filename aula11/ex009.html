@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qual pais?</title>
+  </head>
+  <body>
+    <h1>De qual pais você é?</h1>
+    Pais: <input type="text" id="pais" />
+    <input type="button" value="resultado" id="bnt" />
+    <div id="res"></div>
+
+    <script>
+      var bnt = document.getElementById("bnt");
+      bnt.addEventListener("click", resu);
+
+      function resu() {
+        var pais = document.getElementById("pais");
+        var res = document.getElementById("res");
+        res.innerHTML = `<p>Você é de ${pais.value}</p>`;
+        if (pais != "Brasil") {
+          res.innerHTML += `<strong> Estrangeiro </strong>`;
+        } else {
+          res.innerHTML += `<strong>Brasileiro </strong>`;
+        }
+      }
+    </script>
+  </body>
+</html>
