@@ -16,9 +16,9 @@
       bnt.addEventListener("click", resu);
 
       function resu() {
-        var pais = document.getElementById("pais");
+        var pais = document.getElementById("pais").value;
         var res = document.getElementById("res");
-        res.innerHTML = `<p>Você é de ${pais.value}</p>`;
+        res.innerHTML = `<p>Você é de ${pais}</p>`;
         if (pais != "Brasil") {
           res.innerHTML += `<strong> Estrangeiro </strong>`;
         } else {
