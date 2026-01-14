@@ -7,7 +7,7 @@ function start() {
   var passo = document.getElementById("passo").value;
   var res = document.getElementById("res");
 
-  if (num1.length == 0 || num1 > num2) {
+  if (num1.length == 0) {
     alert("Digite um numero para o Inicio, ele precisa ser menor que o fim");
     return;
   }
@@ -28,7 +28,13 @@ function start() {
 
   res.innerHTML = "";
 
-  for (n = n1; n <= n2; n += p) {
-    res.innerHTML += n + " ";
+  if (n1 < n2) {
+    for (n = n1; n <= n2; n += p) {
+      res.innerHTML += n + " ";
+    }
+  } else {
+    for (n = n1; n >= n2; n -= p) {
+      res.innerHTML += n + " ";
+    }
   }
 }
