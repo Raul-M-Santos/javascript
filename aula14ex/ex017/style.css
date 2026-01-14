@@ -22,3 +22,11 @@ footer {
   color: white;
   font-style: italic;
 }
+
+select {
+  width: 140px;
+}
+
+div {
+  padding: 10px;
+}
