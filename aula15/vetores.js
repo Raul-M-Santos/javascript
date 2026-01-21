@@ -6,7 +6,7 @@ for (s in valores) {
     console.log(valores[s])
 }
 
-let sa = valores.indexOf(9)
+let sa = valores.indexOf(3)
 
 if (sa == -1) {
     console.log(`O valor não existe`)
