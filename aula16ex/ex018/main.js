@@ -6,9 +6,8 @@ let valores = [];
 let res2 = document.getElementById("res2");
 
 function fnc1() {
-  let num = Number(document.getElementById("num").value);
   let res = document.getElementById("res");
-
+  let num = Number(document.getElementById("num").value);
   if (num <= 0 || num > 100) {
     alert("adicione um numero maior que 0 e menor ou igual 100");
   } else {
@@ -23,6 +22,24 @@ function fnc1() {
 }
 
 function fnc2() {
-  for (i = 0; )
-  res2.innerHTML += `ao todo temos:`;
+  let res = document.getElementById("res");
+  if (valores == 0) {
+    alert("adicione um numero do campo acima");
+    return;
+  }
+
+  valores.sort();
+  let maior = valores[valores.length - 1];
+  let soma = 0;
+  for (n = 0; n < valores.length; n++) {
+    soma += valores[n];
+  }
+  let media = soma / valores.length;
+  res2.innerHTML = "";
+
+  res2.innerHTML += `ao todo temos: ${valores.length}`;
+  res2.innerHTML += `<p> O maior valor informado foi  ${maior}</p>`;
+  res2.innerHTML += `<p> O menor valor informando foi ${valores[0]} </p>`;
+  res2.innerHTML += `<p> Somando todos os valores temos  ${soma}</p>`;
+  res2.innerHTML += `<p> A média dos valores digitados é ${media}</p>`;
 }
