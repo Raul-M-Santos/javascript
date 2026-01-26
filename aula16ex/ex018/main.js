@@ -22,24 +22,23 @@ function fnc1() {
 }
 
 function fnc2() {
-  let res = document.getElementById("res");
   if (valores == 0) {
     alert("adicione um numero do campo acima");
-    return;
-  }
+  } else {
+    valores.sort();
+    let maior = valores[valores.length - 1];
+    let menor = valores[0];
+    let soma = 0;
+    for (n = 0; n < valores.length; n++) {
+      soma += valores[n];
+    }
+    let media = soma / valores.length;
+    res2.innerHTML = "";
 
-  valores.sort();
-  let maior = valores[valores.length - 1];
-  let soma = 0;
-  for (n = 0; n < valores.length; n++) {
-    soma += valores[n];
+    res2.innerHTML += `ao todo temos: ${valores.length}`;
+    res2.innerHTML += `<p> O maior valor informado foi  ${maior}</p>`;
+    res2.innerHTML += `<p> O menor valor informando foi ${menor} </p>`;
+    res2.innerHTML += `<p> Somando todos os valores temos  ${soma}</p>`;
+    res2.innerHTML += `<p> A média dos valores digitados é ${media}</p>`;
   }
-  let media = soma / valores.length;
-  res2.innerHTML = "";
-
-  res2.innerHTML += `ao todo temos: ${valores.length}`;
-  res2.innerHTML += `<p> O maior valor informado foi  ${maior}</p>`;
-  res2.innerHTML += `<p> O menor valor informando foi ${valores[0]} </p>`;
-  res2.innerHTML += `<p> Somando todos os valores temos  ${soma}</p>`;
-  res2.innerHTML += `<p> A média dos valores digitados é ${media}</p>`;
 }
