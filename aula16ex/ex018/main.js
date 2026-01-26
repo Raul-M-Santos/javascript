@@ -8,10 +8,13 @@ let res2 = document.getElementById("res2");
 function fnc1() {
   let res = document.getElementById("res");
   let num = Number(document.getElementById("num").value);
-  if (num <= 0 || num > 100) {
-    alert("adicione um numero maior que 0 e menor ou igual 100");
+  if (num <= 0 || num > 100 || valores.indexOf(num) != -1) {
+    alert(
+      "adicione um numero maior que 0 e menor ou igual 100 e ele pode ser adicionado apenas uma vez",
+    );
   } else {
     valores.push(num);
+
     let option = document.createElement("option");
     res.appendChild(option);
     option.innerHTML += `O valor ${num} foi adicionado`;
@@ -22,7 +25,7 @@ function fnc1() {
 }
 
 function fnc2() {
-  if (valores == 0) {
+  if (valores.length === 0) {
     alert("adicione um numero do campo acima");
   } else {
     valores.sort();
