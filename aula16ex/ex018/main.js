@@ -33,8 +33,8 @@ function fnc2() {
       soma += valores[n];
     }
     let media = soma / valores.length;
-    res2.innerHTML = "";
 
+    res2.innerHTML = "";
     res2.innerHTML += `ao todo temos: ${valores.length}`;
     res2.innerHTML += `<p> O maior valor informado foi  ${maior}</p>`;
     res2.innerHTML += `<p> O menor valor informando foi ${menor} </p>`;
